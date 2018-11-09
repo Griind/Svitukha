@@ -1,11 +1,11 @@
 ﻿
 <div class="start_bar">
-    <input id="start_button" type="image" alt="Start Button" src="@Url.Content("~/Content/Images/start.gif")" height="35" width="80">
+    <input id="startButton" type="image" alt="Start Button" src="@Url.Content("~/Content/Images/start.gif")" height="35" width="80">
     <div id="startMenu" class="startMenu-content">
         <img class="startMenuLogo" src="@Url.Content("~/Content/Images/win95.png")" alt="Start Menu Logo">
-        <input id="programs_button" class="programs_button" type="image" alt="Programs Button" src="@Url.Content("~/Content/Images/programs.png")" height="50" width="200">
-        <div id="start-subMenu" class="start-subMenu-content">
-            <input id="programs_button" type="image" alt="Programs Button" src="@Url.Content("~/Content/Images/programs.png")" height="50" width="200">
+        <input id="programsButton" class="programs_button" type="image" alt="Programs Button" src="@Url.Content("~/Content/Images/programs.png")" height="50" width="200">
+        <div id="startSubMenu" class="start-subMenu-content">
+            <input id="programs_button" type="image" alt="Programs Button" src="@Url.Content("~/Content/Images/mspaint.png")" height="50" width="200">
         </div>
         <input id="contact_button" type="image" alt="contact Button" src="@Url.Content("~/Content/Images/contact.png")" height="50" width="200">
         <input id="about_button" type="image" alt="about Button" src="@Url.Content("~/Content/Images/about.png")" height="50" width="200">
@@ -15,6 +15,6 @@
     </div>
     <img id="clockbg" src="@Url.Content("~/Content/Images/clock.gif")" height="35" width="90" alt="Clock">
     <span id="clock">
-        10:17 pm
+        @DateTime.Now.ToString("hh:mm tt")
     </span>
 </div>

@@ -1,6 +1,8 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: teal;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -31,22 +33,27 @@ textarea {
     bottom: 0;
     background: #bfbfbf;
 }
-#start_button {
+
+#startButton {
     margin: 2px;
     float: left;
 }
+
 .startMenuLogo {
     position: absolute;
     bottom: 0;
 }
+
 .startMenu-content input {
     display: block;
     text-decoration: none;
     float: right;
 }
+
 input[type="image" i] {
     cursor: pointer;
 }
+
 .startMenu-content {
     display: none;
     position: absolute;
@@ -57,3 +64,50 @@ input[type="image" i] {
     z-index: 10000;
 }
 
+.windowButton {
+    float: left;
+    width: 135px;
+    margin-top: 3px;
+    font-size: 16px;
+    padding-left: 10px;
+    margin-right: 2px;
+    padding-top: 6px;
+    padding-bottom: 9px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJEAAAAhCAIAAABWcN4BAAAACXBIW…3QTDM0QzM00wzN0EwzNEMzzajmvZPqNqqdcdDYz2OwMw56ACBeCN5COHB2AAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+}
+
+#clock {
+    height: 35px;
+    width: 86px;
+    right: -2px;
+    bottom: -5px;
+}
+
+#clock, #clockbg {
+    position: absolute;
+}
+
+
+#clockbg {
+    margin: 2px;
+    right: 0;
+}
+
+.start-subMenu-content {
+    display: none;
+    position: absolute;
+    background-color: #bfbfbf;
+    width: 200px;
+    bottom: 99px;
+    left: 225px;
+    border: 1px outset #000;
+    z-index: 10000;
+}
+    .start-subMenu-content:hover{
+        display:inherit;
+    }
+
+    #programsButton:hover + .start-subMenu-content {
+        display: inherit;
+    }
