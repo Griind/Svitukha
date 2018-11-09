@@ -22,3 +22,38 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*Footer*/
+.start_bar {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    bottom: 0;
+    background: #bfbfbf;
+}
+#start_button {
+    margin: 2px;
+    float: left;
+}
+.startMenuLogo {
+    position: absolute;
+    bottom: 0;
+}
+.startMenu-content input {
+    display: block;
+    text-decoration: none;
+    float: right;
+}
+input[type="image" i] {
+    cursor: pointer;
+}
+.startMenu-content {
+    display: none;
+    position: absolute;
+    background-color: #bfbfbf;
+    width: 225px;
+    bottom: 42px;
+    border: 1px outset #000;
+    z-index: 10000;
+}
+
