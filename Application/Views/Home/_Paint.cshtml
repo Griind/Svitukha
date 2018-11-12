@@ -1,9 +1,39 @@
-﻿<div>
-
-    <canvas id="canv">Your browser is not supported. </canvas>
+﻿@{ Layout = null; }
+<div>
+    test
+    <canvas id="canv" style="display:block;background-color:#f1f1f1">Your browser is not supported. </canvas>
     <script>
         var
             canv = document.getElementById('canv'),
-            ctx = canv.getContext('2d');
+            ctx = canv.getContext('2d'),
+            isMouseDown = false;
+
+        canv.width = window.innerWidth;
+        canv.height = window.innerHeight;
+
+        canv.addEventListener('mousedown', function () {
+            isMouseDown = true;
+        });
+
+        canv.addEventListener('mouseup', function () {
+            isMouseDown = false;
+            ctx.beginPath();
+        });
+        ctx.strokeStyle = 'magenta';
+        ctx.fillStyle = 'magenta';
+        ctx.lineWidth = 10;
+        canv.addEventListener('mousemove', function (e) {
+            if (isMouseDown) {
+                ctx.lineTo(e.clientX, e.clientY);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.arc(e.clientX, e.clientY, 5, 0, Math.PI * 2, false);
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.moveTo(e.clientX, e.clientY);
+            }
+        });
     </script>
 </div>

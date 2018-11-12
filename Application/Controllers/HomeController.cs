@@ -26,5 +26,9 @@ namespace Application.Controllers
 
             return View();
         }
+        public ActionResult Paint()
+        {
+            return View("_paint");
+        }
     }
 }
