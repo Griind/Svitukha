@@ -25,6 +25,13 @@ textarea {
     max-width: 280px;
 }
 
+iframe {
+    height: 640px;
+    width: 480px;
+    resize: both;
+    overflow: auto;
+   
+}
 /*Footer*/
 .start_bar {
     position: absolute;

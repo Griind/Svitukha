@@ -1,29 +1,32 @@
 ﻿@{ Layout = null; }
 <div>
-    test
+    <input type="color" id="html5colorpicker" onchange="clickColor(0, -1, -1, 5)" value="#fb19ff" style="width:25%;">
     <canvas id="canv" style="display:block;background-color:#f1f1f1">Your browser is not supported. </canvas>
     <script>
         var
             canv = document.getElementById('canv'),
             ctx = canv.getContext('2d'),
-            isMouseDown = false;
+            isMouseDown = false,
+            selectedColor;
 
         canv.width = window.innerWidth;
         canv.height = window.innerHeight;
 
         canv.addEventListener('mousedown', function () {
             isMouseDown = true;
+            selectedColor = document.getElementById('html5colorpicker').value;
         });
 
         canv.addEventListener('mouseup', function () {
             isMouseDown = false;
             ctx.beginPath();
         });
-        ctx.strokeStyle = 'magenta';
-        ctx.fillStyle = 'magenta';
+
         ctx.lineWidth = 10;
         canv.addEventListener('mousemove', function (e) {
             if (isMouseDown) {
+                ctx.strokeStyle = selectedColor;
+                ctx.fillStyle = selectedColor;
                 ctx.lineTo(e.clientX, e.clientY);
                 ctx.stroke();
 
